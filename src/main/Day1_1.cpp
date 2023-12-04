@@ -2,22 +2,6 @@
 #include <fstream>
 #include <string>
 using namespace std;
-int main() {
-    fstream input;
-
-    input.open("Day1.txt", iostream::in);
-
-    int total = 0;
-
-    if (input.is_open()) {
-        string line;
-        while (getline(input, line)) {
-            total += readline(line);
-        }
-    }
-
-    cout << total;
-}
 
 int readline(string line) {
     int length = line.length();
@@ -35,4 +19,21 @@ int readline(string line) {
         }
     }
     return result;
+}
+
+int main() {
+    fstream input;
+
+    input.open("Day1.txt", iostream::in);
+
+    int total = 0;
+
+    if (input.is_open()) {
+        string line;
+        while (getline(input, line)) {
+            total += readline(line);
+        }
+    }
+
+    cout << total;
 }
